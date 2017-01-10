@@ -90,8 +90,6 @@ public final class ManageWebAppSqlConnection {
                 System.out.println("Creating SQL database " + sqlDbName + "...");
 
                 SqlDatabase db = server.databases().define(sqlDbName)
-                        .withoutElasticPool()
-                        .withoutSourceDatabaseId()
                         .create();
 
                 System.out.println("Created SQL database " + db.name());
